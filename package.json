@@ -1,0 +1,42 @@
+{
+	"name": "printr-debugger",
+	"displayName": "printr-debugger",
+	"description": "print_r debug",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.37.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:printrDebug.print"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "printrDebug.print",
+				"title": "PrintR"
+			}
+		],
+		"keybindings": [
+			{
+			  "command": "printrDebug.print",
+			  "key": "ctrl+alt+p",
+			  "mac": "ctrl+alt+p"
+			}
+		  ]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"eslint": "^5.13.0",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
